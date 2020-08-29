@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>510</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calculator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Ressources.qrc">
+    <normaloff>:/icon_calculator.ico</normaloff>:/icon_calculator.ico</iconset>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <widget class="QWidget" name="window">
+   <property name="minimumSize">
+    <size>
+     <width>350</width>
+     <height>510</height>
+    </size>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <layout class="QHBoxLayout" name="hLayoutResultScreen">
+      <item>
+       <widget class="QLabel" name="lblScreenResult">
+        <property name="font">
+         <font>
+          <family>Courier</family>
+          <pointsize>25</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:white; border-radius:1px;</string>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="indent">
+         <number>-1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayoutCenter">
+      <item row="3" column="1">
+       <widget class="QPushButton" name="btn_2">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>2</string>
+        </property>
+        <property name="shortcut">
+         <string>2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="btn_6">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>6</string>
+        </property>
+        <property name="shortcut">
+         <string>6</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="btn_8">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>8</string>
+        </property>
+        <property name="shortcut">
+         <string>8</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QPushButton" name="btn_9">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>9</string>
+        </property>
+        <property name="shortcut">
+         <string>9</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QPushButton" name="btnDecimal">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>.</string>
+        </property>
+        <property name="shortcut">
+         <string>.</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="btn_3">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>3</string>
+        </property>
+        <property name="shortcut">
+         <string>3</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QPushButton" name="btnOperatorPlus">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+        <property name="shortcut">
+         <string>+</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QPushButton" name="btn_4">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>4</string>
+        </property>
+        <property name="shortcut">
+         <string>4</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="btn_5">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>5</string>
+        </property>
+        <property name="shortcut">
+         <string>5</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="btn_7">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>7</string>
+        </property>
+        <property name="shortcut">
+         <string>7</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="btn_1">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>1</string>
+        </property>
+        <property name="shortcut">
+         <string>1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QPushButton" name="btnOperatorMinus">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>-</string>
+        </property>
+        <property name="shortcut">
+         <string>-</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QPushButton" name="btnOperatorMultiply">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>*</string>
+        </property>
+        <property name="shortcut">
+         <string>*</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="btnOperatorDivide">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>/</string>
+        </property>
+        <property name="shortcut">
+         <string>/</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="btnNegativeNb">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>+/-</string>
+        </property>
+        <property name="shortcut">
+         <string>/</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QPushButton" name="btnClear">
+        <property name="minimumSize">
+         <size>
+          <width>71</width>
+          <height>71</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Clear</string>
+        </property>
+        <property name="shortcut">
+         <string>Backspace</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="bottomHLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QPushButton" name="btn_0">
+          <property name="minimumSize">
+           <size>
+            <width>71</width>
+            <height>71</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+          <property name="shortcut">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="btnOperatorEqual">
+          <property name="minimumSize">
+           <size>
+            <width>71</width>
+            <height>71</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string>=</string>
+          </property>
+          <property name="shortcut">
+           <string>Return</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Ressources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>btn_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>digitPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>77</x>
+     <y>328</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>315</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>digitPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>171</x>
+     <y>328</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>91</x>
+     <y>336</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>digitPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>255</x>
+     <y>328</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>339</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_7</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>digitPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>60</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>5</x>
+     <y>262</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_8</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>digitPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>171</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>92</x>
+     <y>258</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_9</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>digitPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>255</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>182</x>
+     <y>258</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_1</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>digitPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>50</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>7</x>
+     <y>415</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>digitPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>171</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>94</x>
+     <y>419</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>digitPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>255</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>177</x>
+     <y>417</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_0</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>digitPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>491</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>32</x>
+     <y>500</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnOperatorDivide</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>operatorPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>255</x>
+     <y>173</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>176</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnOperatorMultiply</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>operatorPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>338</x>
+     <y>173</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>263</x>
+     <y>181</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnOperatorMinus</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>operatorPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>251</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>344</x>
+     <y>269</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnOperatorPlus</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>operatorPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>328</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>344</x>
+     <y>335</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnDecimal</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>operatorPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>407</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnOperatorEqual</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>operatorPressed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>338</x>
+     <y>491</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>341</x>
+     <y>486</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnClear</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>resetOperation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>6</x>
+     <y>138</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnNegativeNb</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>negativeNb()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>103</x>
+     <y>152</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>89</x>
+     <y>151</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>digitPressed()</slot>
+  <slot>operatorPressed()</slot>
+  <slot>resetOperation()</slot>
+  <slot>negativeNb()</slot>
+ </slots>
+</ui>
